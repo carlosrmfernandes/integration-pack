@@ -1,6 +1,4 @@
-![alt text](https://portaldoponto.pagfacil.com.br/skins/pagfacil/im/logo.gif)
 ## Pack Integration
-
 
 ## Começando
 Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo.
@@ -75,6 +73,7 @@ Cria um arquivo que vai contem o endpoint base da integração
 
 ```php
 config/example.php
+
 <?php
 
 return [
