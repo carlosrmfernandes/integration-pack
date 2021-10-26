@@ -39,7 +39,37 @@ Criar um Service Providers
 Para mais informações clique [aqui](https://laravel.com/docs/6.x/providers)  
 
 ```php
-php artisan make:provider NameServiceProvider
+php artisan make:provider ExampleProvider
+```
+```php
+class ExampleProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton(Client::class, function () {
+            $config = config(/*key*/);
+            $client = new GuzzleClient([
+                'base_uri' => $config['base_uri'],
+            ]);
+            return new Client(new Strategy($client));
+        });
+    }
+
+    /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+}
 ```
 
 Registrar o Service Providers 
@@ -52,17 +82,13 @@ App/config/app
         /*
          * Package Service Providers...
          */
-        \App\Providers\ExampleWeatherProvider::class,
+        \App\Providers\ExampleProvider::class,
         /*
          * Application Service Providers...
          */       
     ],
 ```
 
-Acessar o container onde esta à aplicacão 
-```php
-docker exec -i -t php-fpm_payment /bin/bash
-```
 
 Pra quem vem do JavaScript, esse comando funcionaria como o npm, o "composer install" vai instalar todas as dependências do Laravel necessárias para executar o projeto em sua máquina
 
