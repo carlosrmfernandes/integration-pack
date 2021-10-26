@@ -26,23 +26,37 @@ Baixar o projecto
 ```
 
 
-Destro do pasta ``` APP ``` do projecto criar um arquivo .evn coloca os dados que estarão no arquivo .env_docker.example;
+Destro do diretório ``` APP ``` do projecto criar um diretório com o nome de ```Components```
 
 
-A seguir, execute o seguinte:
+A seguir
 
-Todos esses comandos que citarei a seguir, devem ser executados na linha de comando da sua máquina. Portanto, navegue até a pasta do projeto para poder executar os comandos abaixo especificados.
-logo após clona-ló, na pasta raíz do projeto execute os seguintes comandos. 
+Coloque o projecto baixado dentro do diretório ```Components```
+Renomea o diretório ```NameIntegration``` com nome da sua integração
 
-Criar uma network docker
+Criar um Service Providers 
+
+Para mais informações clique [aqui](https://laravel.com/docs/6.x/providers)  
 
 ```php
-docker network create -d bridge payment
+php artisan make:provider NameServiceProvider
 ```
 
-Executar o docker compuser
+Registrar o Service Providers 
+
 ```php
-docker-compose up 
+App/config/app
+
+'providers' => [
+
+        /*
+         * Package Service Providers...
+         */
+        \App\Providers\ExampleWeatherProvider::class,
+        /*
+         * Application Service Providers...
+         */       
+    ],
 ```
 
 Acessar o container onde esta à aplicacão 
