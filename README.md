@@ -71,7 +71,10 @@ class ExampleProvider extends ServiceProvider
     }
 }
 ```
+Cria um arquivo que vai contem o endpoint base da integração 
+
 ```php
+config/example.php
 <?php
 
 return [
@@ -96,92 +99,3 @@ App/config/app
          */       
     ],
 ```
-
-
-Pra quem vem do JavaScript, esse comando funcionaria como o npm, o "composer install" vai instalar todas as dependências do Laravel necessárias para executar o projeto em sua máquina
-
-```php
-composer install
-```
-## Banco de dados
-Configura o seu banco de dados 
-
-Acesse o container pgadmin_payment via browser
-
-```php
-localhost:5050
-
-EMAIL=user@domain.com
-PASSWORD=SuperSecret    
-```
-Criar novo server no pgadmin_payment
-
-```php
-DB_HOST=postgresql_payment
-DB_PORT=5432
-DB_DATABASE=payment_dev
-DB_USERNAME=postgres
-DB_PASSWORD=root 
-```
-
-Acessar o container onde esta à aplicacão e executar os seguinte comando
-
-```php
-docker exec -i -t php-fpm_payment /bin/bash
-```
-
-```php
-php artisan config:clear
-```
-
-```php
-composer dump-autoload
-```
-
-```php
-php artisan migrate
-```
-
-
-## execução das queue 
-
-Acessar o container onde esta à aplicacão e executar os seguinte comando
-
-```php
-docker exec -i -t php-fpm_payment /bin/bash
-```
-
-Execute o seguinte comando 
-
-```php
-php artisan queue:work
-```
-
-
-## Teste Unintário  
-
-Nessa aplicão tem os test para:
-
-```php
-- Criação de usuário (testa o fluxo de criação de usuário completo)
-- Criação da carteira do usuário
-- Login
-- Tranferência de valor (testa o fluxo de tranferencia completo)
-- Relacionamento de usuário e carteira 
-```
-
-Execute o seguinte comando para executar os testes
-
-```php
-vendor/bin/phpunit
-```
-
-## Link da documentação 
-
-https://drive.google.com/file/d/1W3QJoCq4H5hklBJM_k-22PpRfsYEYWGj/view?usp=sharing
-
-## Link da collections 
-
-https://www.getpostman.com/collections/0efb6c5fcb157a78ba5c
-
-
