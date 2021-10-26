@@ -30,7 +30,7 @@ Destro do diretório ``` APP ``` do projecto criar um diretório com o nome de `
 A seguir
 
 Coloque o projecto baixado dentro do diretório ```Components```
-Renomea o diretório ```integration-pack-master``` com nome da sua integração
+Renomea o diretório ```NameIntegration``` com nome da sua integração
 
 Criar um Service Providers 
 
