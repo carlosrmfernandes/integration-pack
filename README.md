@@ -71,7 +71,15 @@ class ExampleProvider extends ServiceProvider
     }
 }
 ```
+```php
+<?php
 
+return [
+    'base_uri' => env('Example_BASE_URI'),
+    'name' => ''
+];
+
+```
 Registrar o Service Providers 
 
 ```php
