@@ -1,24 +1,17 @@
 ![alt text](https://portaldoponto.pagfacil.com.br/skins/pagfacil/im/logo.gif)
-## API EASY PAYMENT
+## Pack Integration
 
 
 ## Começando
 Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo.
 
-## Plataforma para execução do projeto
+## Tecnologia
 
 ```php
-Docker
+Guzzle PHP
 ```
-Para mais informações clique [aqui](https://docs.docker.com/) para visitar a documentação oficial do docker
-Escrevi esse artigo de como Como criar containers com Laravel, PostgreSQL, PgAdmin e NGINX utilizando Docker CLI Para mais informações clique [aqui](https://medium.com/@carlosr.m.fernandes/como-criar-containers-com-laravel-postgresql-pgadmin-e-nginx-utilizando-docker-cli-ff3d57b00029)
+Para mais informações clique [aqui](https://docs.guzzlephp.org/en/stable/) 
 
-
-## Design de software
-
-```php
-S O L I D 
-```
 
 ## Framework
 
@@ -26,20 +19,14 @@ S O L I D
 Laravel
 ```
 
-## Base de dados para execução das notificações 
-
-```php
-Redis
-```
-
 ## Pré-requisitos
 
 ```php
-Clonar o projecto
+Baixar o projecto
 ```
 
 
-Destro raiz do projecto criar um arquivo .evn coloca os dados que estarão no arquivo .env_docker.example;
+Destro do pasta ``` APP ``` do projecto criar um arquivo .evn coloca os dados que estarão no arquivo .env_docker.example;
 
 
 A seguir, execute o seguinte:
